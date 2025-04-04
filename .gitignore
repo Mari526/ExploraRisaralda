@@ -1,0 +1,19 @@
+# Ignorar cosas del sistema
+*.lnk
+*.exe
+*.zip
+*.mp4
+*.jpg
+*.png
+*.jpeg
+
+# Carpetas comunes
+node_modules/
+.vscode/
+OneDrive/
+Downloads/
+Videos/
+Music/
+Documents/
+Saved Games/
+AppData/
