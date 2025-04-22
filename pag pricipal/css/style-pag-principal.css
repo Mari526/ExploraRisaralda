@@ -1,4 +1,503 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/*Agrego la fuente cursiva yesterday*/
+@font-face {
+font-family: 'Yesterday';
+src: url('../fonts/Yesteryear-Regular.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+/*Especifico las medidas de las secciones*/
+.principal,
+.gastronomia,
+.carousel,
+.cosasParaHacer,
+.hospedajes,
+.mapa {
+position: relative;
+width: 100%;
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+position: relative;
+padding: 40px 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 0;
+overflow: hidden;
+}
+/*agrego el fondo con el filtro para oscurecer la imagen*/
+.principal::before,
+.gastronomia::before,
+.carousel::before,
+.cosasParaHacer::before,
+.hospedajes::before,
+.mapa::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../fondo-de-explora-risaralda.jpg');
+background-size: cover;
+background-position: center;
+z-index: -1;
+}
+
+.principal header,
+.principal nav,
+.info,
+.Informacion3,
+.gastronomia,
+.cosasParaHacer,
+.hospedajes,
+.mapa,
+footer {
+position: relative;
+z-index: 1;
+}
+/*Agrego los estilos a el header con su posicición y con una leve transparencia*/
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  margin-top: -35rem;
+  gap:rem;
+}
+
+/* Logo */
+.logo h1 {
+  font-family:yesterday ;
+  font-size: 42px;
+  font-weight: bold;
+  margin-left: 22rem;
+  margin-top: -25px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  position: fixed;
+}
+
+/* Contenedor de iconos y login */
+.iconos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 72rem;
+}
+
+/* Iconos */
+.icon {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.imgicons {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Login */
+.login {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Barra baja de navegación */
+.barra-baja {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  padding: 0 30px;
+  z-index: 999;
+  margin-top: -35rem;
+  margin-right: 21rem;
+}
+
+.barra-baja ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.barra-baja ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.barra-baja ul li a:hover {
+  border-bottom: 2px solid white;
+}
+/*Diseños de el espacio de secciones de información*/
+.info {
+  width: 100%;
+  height: 16rem;
+  background-color: white;
+  display: flex;
+  gap: 60px;
+}
+.imgInfoDates{
+  align-content: flex-start;
+  gap: 10px;
+  width: 25rem;
+  height: 16rem;
+
+}
+h3{
+  width: 110%;
+  height: 30px;
+  margin:30px 20px;
+  color: rgb(59, 187, 59);
+  font-size: 1.5rem;
+}
+.textoColum1 p,
+.textoColum2 p{
+  text-align: center;
+  margin-top: 50px;
+  width: 25rem;
+  font-size: 1.2rem;
+  color: black;
+
+}
+/* Estilos para el carrusel */
+.carousel {
+width: 100%;
+padding: 2rem 0;
+position: relative;
+overflow: hidden;
+background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../fondo-de-explora-risaralda.jpg');
+background-size: cover;
+background-position: center;
+}
+
+/* Contenedor de las tarjetas */
+.cards-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+padding: 0 10%;
+}
+
+/* Tarjetas individuales */
+.card-item {
+position: relative;
+width: 400px;
+height: 550px;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+transition: transform 0.3s ease;
+margin-top: 5rem;
+}
+
+.card-item:hover {
+transform: translateY(-10px);
+}
+
+.card-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Overlay con título y botón */
+.card-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, transparent 80%);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 20px;
+color: white;
+}
+
+.card-overlay h3 {
+font-size: 2rem;
+margin: 15px 0 0 0;
+text-align: center;
+color: white;
+}
+
+.btn-conocer {
+background: transparent;
+border: 2px solid white;
+color: white;
+padding: 8px 25px;
+border-radius: 30px;
+font-size: 1.2rem;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-bottom: 20px;
+align-self: center;
+}
+
+.btn-conocer:hover {
+background: white;
+color: black;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev, 
+.carousel-control-next {
+width: 50px;
+height: 50px;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+opacity: 0.8;
+}
+
+.carousel-control-prev {
+left: 20px;
+}
+
+.carousel-control-next {
+right: 20px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+bottom: -20px;
+}
+
+.carousel-indicators button {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: white;
+opacity: 0.5;
+margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+opacity: 1;
+}
+h2{
+color: white;
+text-align: center;
+font-weight: bold;
+margin-top: 4rem;
+font-size: 3rem;
+}
+/*Contenedor tarjetas de gastronomia*/
+.containerCard{
+width: 100%;
+height: 100vh;
+background-color:transparent;
+display: flex;
+justify-content: center;
+margin-left: 2.3em;
+}
+/*Las tres tarjetas de gastronnomia */
+.cardOne,
+.cardTwo,
+.cardThree{
+width: 26%;
+height: 590px;
+background: linear-gradient(to top, rgba(7, 7, 7, 0.8) 20%, transparent 80%);
+justify-content: space-between;
+color: white;
+border-radius: 25px;
+margin-right:3em;
+box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+/*imagenes de las tarjetas */
+.imgTarjetas{
+width: 100%;
+height: 20rem;
+border-radius: 25px;
+}
+/*Boton de ir */
+.ir{
+background-color: #68A12F;
+border-radius: 25px;
+width: 100px;
+height: 50px;
+font-size: 1.5rem;
+font-weight: 500;
+color: white;
+margin: 9px 250px;
+} 
+.irRestaurante{
+background-color: #68A12F;
+border-radius: 25px;
+width: 100px;
+height: 50px;
+font-size: 1.5rem;
+font-weight: 500;
+color: white;
+margin: -20px 250px;
+}
+/*Los parrafos de las tarjetas */
+.cardOne p,
+.cardTwo p,
+.cardThree p{
+font-size: 1.2rem;
+margin-left: 1.5rem;
+
+}
+/*Titulos h4*/
+h4{
+font-size: 2rem;
+font-weight: lighter;
+margin-left: 1.6rem;
+margin-top: -3px;
+}
+/*Linea verde decortaiva*/
+.lineaVerde{
+background-color: #68A12F;
+height: 25px;
+}
+.containerCosasHacer{
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+position: relative;
+z-index: 2;
+}
+/*.section-titulos{
+color: white;
+font-size: 2.5rem;
+text-align: center;
+margin-bottom: 40px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+z-index: 4;
+}
+/*Grid de las imagenes de actividades para hacer*/
+.grid-container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto;
+gap: 15px;
+height: 550px;
+}
+.grid-item{
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.grid-item img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s ease;
+}
+.grid-item:hover img{
+transform: scale(1.05);
+}
+/*Posicion y tamaño de las imagenes*/
+.large-left {
+grid-column: 1;
+grid-row: 1 / span 2;
+}
+
+.medium-top-right {
+grid-column: 2;
+grid-row: 1;
+height: 270px;
+}
+
+.small-bottom-left {
+grid-column: 1;
+grid-row: 2;
+margin-top: -270px;
+width: 48%;
+height: 270px;
+}
+
+.medium-bottom-right {
+grid-column: 2;
+grid-row: 2;
+height: 270px;
+}
+/*Overlay de la frase de las imagenes*/
+.overlay{
+position: absolute;
+bottom: 0;
+margin-left: 30%;
+width: 100%;
+height: 100%;
+background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 10% transparent 60%);
+display: flex;
+align-items: flex-end;
+padding: 20px;
+}
+.overlay h3{
+color: white;
+font-size: 1.8rem;
+font-weight: 700;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.attribution {
+color: rgba(255, 255, 255, 0.7);
+font-size: 0.7rem;
+text-align: right;
+margin-top: 10px;
+}
+.containerCards {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cards > div {
+  width: 360px;
+  height: 590px;
+  background: linear-gradient(to top, rgba(7, 7, 7, 0.8) 20%, transparent 80%) url(../img-pag-principal/comida/restaurantes.jpg);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.cards img {
+  width: 100%;
+  height:100%;
+  border-radius: 25px;
+  object-fit: cover;
+  z-index: -3;
 }
