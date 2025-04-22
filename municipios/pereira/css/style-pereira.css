@@ -1,0 +1,560 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/* HEADER fijo arriba con leve transparencia */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15); /* leve transparencia */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+  
+/* NAV fijo justo debajo del header */
+nav {
+  position: fixed;
+  top: 60px; /* altura del header */
+  left: 0;
+  width: 100%;
+  background: transparent; /* sin fondo */
+  padding: 0.5rem 0;
+  backdrop-filter: none;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+  
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+  
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.Informacion1 {
+  background-image: url('../img/fondo_principal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin: 0;
+  margin-top: 140px;
+  border-radius: 0;
+  overflow: hidden; /* para que la capa no se salga */
+}
+
+.Informacion1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Ajusta el nivel de opacidad aquí */
+  z-index: 0;
+}
+
+.Informacion1 > * {
+  position: relative;
+  z-index: 1;
+}
+    
+.Informacion1 h2 {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1rem;
+  display: inline-block;
+}
+  
+.contenedor-imagen {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+    
+.Informacion1 img {
+  width: 100%;
+  height: 550px;
+  max-width: 1200px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: block;
+  gap: 8rem;
+}
+    
+.texto {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  width: 600px;
+  max-width: 600px;
+  height: 200px;
+}
+    
+.texto p {
+  margin: 0;
+  font-size: 17px;
+}
+  
+.Informacion2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: #f3f3f3;
+  height: 300px; 
+}
+    
+.imagen1 img {
+  width: 100%;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+    
+.parrafo1 {
+  text-align: left;
+  padding: 0 1rem;
+  color: black;
+}
+    
+.parrafo1 h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #68A12F;
+}
+    
+.parrafo1 p {
+  font-size: 1.2rem;
+  color: black;
+}
+    
+.parrafo2 {
+  color: black;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+    
+/*carrucel*/
+.Informacion3 {
+  background-image: url('../img/fondo_principal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden; /* importante para que la capa no se salga */
+}
+
+.Informacion3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad aquí */
+  z-index: 0;
+}
+
+.Informacion3 > * {
+  position: relative;
+  z-index: 1;
+}
+  
+.Informacion3 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-align: center;
+}
+  
+/* Estilos generales del carrusel */
+#carruselExperiencias {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background: none;
+}
+  
+/* Las imágenes ocupan todo el ancho */
+#carruselExperiencias img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+  
+/* Botones de navegación (flechas) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1rem;
+}
+  
+/* Indicadores (los punticos) */
+.carousel-indicators button {
+  background-color: #444;
+}
+  
+.carousel-indicators .active {
+  background-color: #007bff;
+}
+  
+.carousel-item {
+  background: transparent !important; /* ← esto es clave también */
+}
+  
+.card-group {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+  
+.card {
+  flex: 1;
+  background-color: transparent !important;
+  border-radius: 0;
+  overflow: hidden;
+}
+  
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: transparent !important;
+}
+    
+.Informacion4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: #f3f3f3;
+  height: 300px; 
+}
+  
+.imagen2 img {
+  width: 100%;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+  
+.parrafo3 {
+  text-align: left;
+  padding: 0 1rem;
+  color: black;
+}
+  
+.parrafo3 h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #68A12F;
+}
+  
+.parrafo3 p {
+  font-size: 1.2rem;
+  color: black;
+}
+  
+.parrafo4 {
+  color: black;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+
+/* Sección de fondo para hospedajes */
+.Informacion5 {
+  background-image: url('../img/fondo_principal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden; /* para que la capa no se salga */
+}
+
+.Informacion5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* opacidad del fondo */
+  z-index: 0;
+}
+
+.Informacion5 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título de la sección */
+.Informacion5 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* Carrusel de hospedajes */
+#carruselHospedajes {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background: none;
+}
+
+/* Imágenes del carrusel */
+#carruselHospedajes img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* Controladores (flechas) */
+#carruselHospedajes .carousel-control-prev-icon,
+#carruselHospedajes .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+/* Indicadores (puntitos) */
+#carruselHospedajes .carousel-indicators button {
+  background-color: #444;
+}
+
+#carruselHospedajes .carousel-indicators .active {
+  background-color: #007bff;
+}
+
+/* Fondo transparente del item */
+.carousel-item {
+  background: transparent !important;
+}
+
+/* Grupo de tarjetas */
+ .card-group {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+/* Tarjetas individuales */
+.card {
+  flex: 1;
+  background-color: transparent !important;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Imágenes dentro de las tarjetas */
+.card img {
+  width: 100%;
+  height: 250px; /* igual que el carrusel anterior */
+  object-fit: cover;
+  border-radius: 25px;
+  background: transparent !important;
+}
+.Informacion6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: #f3f3f3;
+  height: 300px; 
+}
+  
+.imagen3 img {
+  width: 100%;
+  height: 300px;
+  border-radius: 0;
+  object-fit: cover;
+}
+  
+.parrafo5 {
+  text-align: left;
+  padding: 0 1rem;
+  color: black;
+}
+  
+.parrafo5 h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #68A12F;
+}
+  
+.parrafo5 p {
+  font-size: 1.2rem;
+  color: black;
+}
+  
+.parrafo6 {
+  color: black;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.Informacion7 {
+  background-image: url('../img/fondo_principal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden; /* para que la capa no se salga */
+}
+
+.Informacion7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* opacidad del fondo */
+  z-index: 0;
+}
+
+.Informacion7 > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título de la sección */
+.Informacion7 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* Carrusel de hospedajes */
+#carruselRESPIRA {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background: none;
+}
+
+/* Imágenes del carrusel */
+#carruselRESPIRA img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* Controladores (flechas) */
+#carruselRESPIRA .carousel-control-prev-icon,
+#carruselRESPIRA .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+/* Indicadores (puntitos) */
+#carruselRESPIRA .carousel-indicators button {
+  background-color: #444;
+}
+
+#carruselRESPIRA .carousel-indicators .active {
+  background-color: #007bff;
+}
+
+/* Fondo transparente del item */
+.carousel-item {
+  background: transparent !important;
+}
+
+/* Grupo de tarjetas */
+ .card-group {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+/* Tarjetas individuales */
+.card {
+  flex: 1;
+  background-color: transparent !important;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Imágenes dentro de las tarjetas */
+.card img {
+  width: 100%;
+  height: 250px; /* igual que el carrusel anterior */
+  object-fit: cover;
+  border-radius: 25px;
+  background: transparent !important;
+}
+footer {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;                         /* Texto blanco */
+  text-align: center;                   /* Centrado */
+  padding: 1rem 0;                      /* Espaciado vertical */
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  backdrop-filter: blur(5px);          /* Efecto de desenfoque suave */
+}
