@@ -1,0 +1,286 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url(../img/fondo_principal.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+
+/* Barra superior */
+.barra-superior {
+    backdrop-filter: blur(30px);
+    height: 61px;
+
+}
+
+.barra-superior .logo h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.barra-superior .iconos a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.barra-superior .iconos img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+#buscar-icono img{
+    width: 28px;
+    height: 28px;
+    margin-left: 0;
+}
+
+#buscar-input-container {
+    display: none; /* Inicialmente oculto */
+    margin-left: 5px;
+   
+}
+
+#buscar-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    height: 20px;
+    border: none;
+    outline: none;
+}
+
+
+/* Barra inferior */
+.barra-inferior {
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+}
+
+.barra-inferior ul.menu-inferior {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra-inferior ul.menu-inferior li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.barra-inferior ul.menu-inferior li a:hover {
+    background-color: #555;
+}
+
+
+/*Container*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200%;
+}
+
+.container {
+    display: flex;
+    background-color: rgba(72, 69, 69, 0.5);
+    box-shadow: 8px 8px 8px rgba(255, 254, 254, 0.5);
+    border-radius: 25px;
+    width: 65%;
+    height: 470px;
+    margin-top: 20px;
+}
+
+.perfil-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color: rgba(51, 49, 49, 0.541);
+    border-radius: 19px;
+    padding: 20px;
+    width: 240px;
+}
+
+.perfil-image {
+    background-color: #ddd;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.perfil-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+p{
+    color: #fff;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.perfil-options a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+    align-items: center;
+    
+}
+
+.perfil-options img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.logout{
+    border-radius: 25px;
+    padding: 2px;
+}
+
+.perfil-options a.logout {
+    color: white;
+}
+
+.logout:hover {
+   background-color: #68A12F;
+}
+
+.logout img {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilos para la sección de favoritos */
+.favoritos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las secciones de Municipios y Cosas por hacer */
+    width: 100%; /* O el ancho que desees */
+}
+
+.favoritos-seccion {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Necesario para posicionar los botones */
+}
+
+.favoritos-seccion h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+/* Estilos para el contenedor del slider de miniaturas */
+.slider-miniaturas-container {
+    overflow-x: auto; /* Permite el scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Para un scroll más suave en iOS */
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra de scroll en IE y Edge */
+    padding-bottom: 10px; /* Espacio para que no se corte la última miniatura */
+}
+
+/* Ocultar la barra de scroll en Webkit (Chrome, Safari) */
+.slider-miniaturas-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilos para el contenedor de las miniaturas */
+.slider-miniaturas {
+    display: flex;
+    gap: 10px; /* Espacio entre las miniaturas */
+    padding: 10px 0; /* Espacio vertical dentro del contenedor */
+}
+
+/* Estilos para cada miniatura */
+.miniatura {
+    width: 150px; /* Ancho de cada miniatura */
+    height: 100px; /* Alto de cada miniatura */
+    border-radius: 8px;
+    overflow: hidden; /* Recorta la imagen si no coincide con las dimensiones */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Evita que las miniaturas se encojan */
+}
+
+.miniatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+    object-position: center;
+}
+
+/* Opcional: Estilos si quieres añadir texto debajo de la imagen */
+.miniatura span {
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/*botones*/
+.slider-nav-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.slider-nav-button:hover {
+    opacity: 1;
+}
+
+.favoritos-seccion .prev {
+    left: 10px;
+}
+
+.favoritos-seccion .next {
+    right: 10px;
+}
+
+.slider-miniaturas-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px 30px 10px 30px; /* Ajustar el padding para que no se superpongan los botones */
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(30px);
+}

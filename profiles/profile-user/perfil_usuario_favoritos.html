@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/style_favoritos.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+                <h1>Explora Risaralda</h1>
+            </div>
+            <div class="iconos">
+                <a href="#" id="buscar-icono"><img src="img/busqueda.png" alt="Buscar"></a>
+                <a href="#"><img src="img/ubicación.png" alt="Mapa"></a>
+                <a href="#"><img src="img/notificación.png" alt="Notificación"></a>
+                <a href="./Perfil_usuario.html"><img src="img/usuario.png" alt="Perfil de usuario"></a>
+                
+            </div>
+        </nav>
+    
+        <nav class="barra-inferior">
+            <ul class="menu-inferior">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hospedaje</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Cosas para Hacer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="perfil-menu">
+                <div class="perfil-image">
+                    <span></span>
+                </div>
+                <p>Hola!</p>
+                <div class="perfil-options">
+                    <a href="./Perfil_usuario.html"><img src="img/usuario.png">Perfil</a>
+                    <a href="./perfil_usuario_notificaciones.html"><img src="img/notificación.png">Notificaciones</a>
+                    <a href="./perfil_usuario_favoritos.html"><img src="img/corazon.png">Favoritos</a>
+                    <a href="./perfil_usuario_historial.html"><img src="img/historial.png">Historial</a>
+                    <a href="./perfil_usuario_configuracion.html"><img src="img/ajustes.png">Configuración</a>
+                    <a href="#" class="logout">Cerrar sesión<img src="img/cerrar_sesión.png"></a>
+                </div>
+            </div>
+            
+                <div class="favoritos-container">
+                    <div class="favoritos-seccion">
+                        <h2>Municipios</h2>
+                        <button class="slider-nav-button prev">❮</button>
+                        <div class="slider-miniaturas-container">
+                            <div class="slider-miniaturas" id="slider-municipios">
+                                <div class="miniatura">
+                                    <img src="img/fondo_principal.jpg" alt="Municipio 1">
+                                    </div>
+                                <div class="miniatura">
+                                    <img src="img/fondo_principal.jpg" alt="Municipio 2">
+                                </div>
+                                <div class="miniatura">
+                                    <img src="img/fondo_principal.jpg" alt="Municipio 3">
+                                </div>
+                                </div>
+                        </div>
+                        <button class="slider-nav-button next">❯</button>
+                    </div>
+                
+                    <div class="favoritos-seccion">
+                        <h2>Cosas por hacer</h2>
+                        <div class="slider-miniaturas-container">
+                            <div class="slider-miniaturas" id="slider-cosas-hacer">
+                                <div class="miniatura">
+                                    <img src="img/cosa1.jpg" alt="Cosa 1">
+                                </div>
+                                <div class="miniatura">
+                                    <img src="img/cosa2.jpg" alt="Cosa 2">
+                                </div>
+                                <div class="miniatura">
+                                    <img src="img/cosa3.jpg" alt="Cosa 3">
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </main>
+    
+    <footer class="footer">&copy; 2026 Explora Risaralda | Todo los derechos reservados.</footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
