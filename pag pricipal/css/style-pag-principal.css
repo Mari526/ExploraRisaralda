@@ -11,6 +11,19 @@ src: url('../fonts/Yesteryear-Regular.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+    font-family: 'Kyiv';
+    src: url('../fonts/kyivtype-sans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 /*Especifico las medidas de las secciones*/
 .principal,
 .gastronomia,
@@ -20,17 +33,20 @@ font-style: normal;
 .mapa {
 position: relative;
 width: 100%;
-min-height: 100vh;
+height: 100vh;
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
 position: relative;
-padding: 40px 0;
 display: flex;
 align-items: center;
-justify-content: center;
 z-index: 0;
 overflow: hidden;
+flex-direction: column; 
+justify-content: flex-start;
+}
+.principal{
+  padding-top: 121px;
 }
 /*agrego el fondo con el filtro para oscurecer la imagen*/
 .principal::before,
@@ -38,7 +54,7 @@ overflow: hidden;
 .carousel::before,
 .cosasParaHacer::before,
 .hospedajes::before,
-.mapa::before {
+.mapa::before{
 content: "";
 position: absolute;
 top: 0;
@@ -60,135 +76,165 @@ z-index: -1;
 .hospedajes,
 .mapa,
 footer {
-position: relative;
 z-index: 1;
 }
-/*Agrego los estilos a el header con su posicición y con una leve transparencia*/
 header {
-  position: absolute;
-  top: 0;
   width: 100%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  margin-top: -35rem;
-  gap:rem;
+  padding: 10px 20px;
+  width: 100%; 
 }
 
-/* Logo */
-.logo h1 {
-  font-family:yesterday ;
-  font-size: 42px;
+/* Barra superior */
+.barra-superior {
+  backdrop-filter: blur(30px);
+  height: 61px;}
+  
+
+
+.barra-superior .logo h1 {
+  font-size: 3em;
   font-weight: bold;
-  margin-left: 22rem;
-  margin-top: -25px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  position: fixed;
-}
-
-/* Contenedor de iconos y login */
-.iconos {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-left: 72rem;
-}
-
-/* Iconos */
-.icon {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.imgicons {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-/* Login */
-.login {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.login li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 300;
+  font-family: yesterday;
 }
 
-/* Barra baja de navegación */
-.barra-baja {
-  position: absolute;
-  top: 70px;
+.barra-superior .iconos a {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.barra-superior .iconos img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+#buscar-icono img {
+  width: 28px;
+  height: 28px;
+  margin-left: 0;
+}
+
+/* Barra inferior */
+.barra-inferior {
+  background-color:transparent; 
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: auto;
+  justify-content: end;
+
+}
+
+.barra-inferior ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+}
+
+.barra-inferior li {
+  margin-right: 20px;
+ 
+  
+}
+
+.barra-inferior a {
+  color: #fff;
+  text-decoration: none; 
+  transition: text-decoration 0.3s ease-in-out;
+}
+.barra-inferior a:hover{
+  text-decoration: underline solid 2px;
+}
+
+/* Estilo para la imagen */
+.lorito {
+  height: auto; 
+  display: flex;
   width: 100%;
-  padding: 0 30px;
-  z-index: 999;
-  margin-top: -35rem;
-  margin-right: 21rem;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.barra-baja ul {
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.barra-baja ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 400;
-  padding-bottom: 5px;
-}
-
-.barra-baja ul li a:hover {
-  border-bottom: 2px solid white;
-}
+.lorosprincipal {
+  height:64%;
+  max-width: 80%;
+  left: auto;
+  }
 /*Diseños de el espacio de secciones de información*/
-.info {
-  width: 100%;
-  height: 16rem;
+/*Sección blaca */
+.datosRisaralda{
   background-color: white;
-  display: flex;
-  gap: 60px;
+  width:100%;
+  height:250px;
+}
+.informacion {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows:auto 1fr 1fr;
+  gap: 10px;
+}
+  
+.imginfo {
+  grid-column: 1 /2;
+  grid-row: 1/ 3;
+
 }
 .imgInfoDates{
-  align-content: flex-start;
-  gap: 10px;
-  width: 25rem;
-  height: 16rem;
+  width: 350px;
+  height: 250px;
+}
+.titulosInfo {
+  grid-column:  2 / 4;
+  grid-row:1 /2;
+  margin-top: 10px;
+  height: auto;
+  text-align: left;
+}
+.tituloVerdeInfo{
+font-family: Inter;
+color: #68A12F;
+margin-top: 15px;
+}
+.columnaUno {
+  grid-column: 2 ;
+  grid-row: 2 / 3;
+  margin-left: 8px;
+  
+}
+.columnaUno p{
+ margin-top: -11rem;
+ font-family: Kyiv;
+}
 
+.columnaDos {
+  grid-column: 3;
+  grid-row: 3/4;
+  margin-left: 5px;
+  margin-right: 10px;
 }
-h3{
-  width: 110%;
-  height: 30px;
-  margin:30px 20px;
-  color: rgb(59, 187, 59);
-  font-size: 1.5rem;
+.columnaDos p{
+  margin-top: -11.7rem;
+  font-family: Kyiv;
 }
-.textoColum1 p,
-.textoColum2 p{
-  text-align: center;
-  margin-top: 50px;
-  width: 25rem;
-  font-size: 1.2rem;
-  color: black;
 
-}
+      
 /* Estilos para el carrusel */
 .carousel {
 width: 100%;
@@ -198,6 +244,7 @@ overflow: hidden;
 background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../fondo-de-explora-risaralda.jpg');
 background-size: cover;
 background-position: center;
+height:90%;
 }
 
 /* Contenedor de las tarjetas */
@@ -212,13 +259,14 @@ padding: 0 10%;
 /* Tarjetas individuales */
 .card-item {
 position: relative;
-width: 400px;
-height: 550px;
+width: 300px;
+height: 450px;
 border-radius: 15px;
 overflow: hidden;
 box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
 transition: transform 0.3s ease;
-margin-top: 5rem;
+margin-top: 1.5rem;
+
 }
 
 .card-item:hover {
@@ -267,8 +315,12 @@ align-self: center;
 }
 
 .btn-conocer:hover {
-background: white;
+background: #68A12F;
 color: black;
+}
+.btn-conocer a{
+  text-decoration: none;
+  color: white;
 }
 
 /* Controles del carrusel */
@@ -284,11 +336,11 @@ opacity: 0.8;
 }
 
 .carousel-control-prev {
-left: 20px;
+left: 80px;
 }
 
 .carousel-control-next {
-right: 20px;
+right: 80px;
 }
 
 /* Indicadores */
@@ -315,189 +367,311 @@ font-weight: bold;
 margin-top: 4rem;
 font-size: 3rem;
 }
-/*Contenedor tarjetas de gastronomia*/
-.containerCard{
-width: 100%;
-height: 100vh;
-background-color:transparent;
-display: flex;
-justify-content: center;
-margin-left: 2.3em;
+
+.section-titulos{
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  top: 0;
+  margin-top: 1rem;
+  margin-bottom: 30px;
+ 
 }
-/*Las tres tarjetas de gastronnomia */
+.gastronomia{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.containerCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: auto;
+}
 .cardOne,
 .cardTwo,
 .cardThree{
-width: 26%;
-height: 590px;
-background: linear-gradient(to top, rgba(7, 7, 7, 0.8) 20%, transparent 80%);
-justify-content: space-between;
-color: white;
-border-radius: 25px;
-margin-right:3em;
-box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-}
-/*imagenes de las tarjetas */
-.imgTarjetas{
-width: 100%;
-height: 20rem;
-border-radius: 25px;
-}
-/*Boton de ir */
-.ir{
-background-color: #68A12F;
-border-radius: 25px;
-width: 100px;
-height: 50px;
-font-size: 1.5rem;
-font-weight: 500;
-color: white;
-margin: 9px 250px;
-} 
-.irRestaurante{
-background-color: #68A12F;
-border-radius: 25px;
-width: 100px;
-height: 50px;
-font-size: 1.5rem;
-font-weight: 500;
-color: white;
-margin: -20px 250px;
-}
-/*Los parrafos de las tarjetas */
-.cardOne p,
-.cardTwo p,
-.cardThree p{
-font-size: 1.2rem;
-margin-left: 1.5rem;
-
-}
-/*Titulos h4*/
-h4{
-font-size: 2rem;
-font-weight: lighter;
-margin-left: 1.6rem;
-margin-top: -3px;
-}
-/*Linea verde decortaiva*/
-.lineaVerde{
-background-color: #68A12F;
-height: 25px;
-}
-.containerCosasHacer{
-width: 90%;
-max-width: 1200px;
-margin: 0 auto;
-position: relative;
-z-index: 2;
-}
-/*.section-titulos{
-color: white;
-font-size: 2.5rem;
-text-align: center;
-margin-bottom: 40px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-z-index: 4;
-}
-/*Grid de las imagenes de actividades para hacer*/
-.grid-container{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto auto;
-gap: 15px;
-height: 550px;
-}
-.grid-item{
-position: relative;
-overflow: hidden;
-border-radius: 8px;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-.grid-item img{
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.5s ease;
-}
-.grid-item:hover img{
-transform: scale(1.05);
-}
-/*Posicion y tamaño de las imagenes*/
-.large-left {
-grid-column: 1;
-grid-row: 1 / span 2;
-}
-
-.medium-top-right {
-grid-column: 2;
-grid-row: 1;
-height: 270px;
-}
-
-.small-bottom-left {
-grid-column: 1;
-grid-row: 2;
-margin-top: -270px;
-width: 48%;
-height: 270px;
-}
-
-.medium-bottom-right {
-grid-column: 2;
-grid-row: 2;
-height: 270px;
-}
-/*Overlay de la frase de las imagenes*/
-.overlay{
-position: absolute;
-bottom: 0;
-margin-left: 30%;
-width: 100%;
-height: 100%;
-background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 10% transparent 60%);
-display: flex;
-align-items: flex-end;
-padding: 20px;
-}
-.overlay h3{
-color: white;
-font-size: 1.8rem;
-font-weight: 700;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-.attribution {
-color: rgba(255, 255, 255, 0.7);
-font-size: 0.7rem;
-text-align: right;
-margin-top: 10px;
-}
-.containerCards {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.cards > div {
-  width: 360px;
-  height: 590px;
-  background: linear-gradient(to top, rgba(7, 7, 7, 0.8) 20%, transparent 80%) url(../img-pag-principal/comida/restaurantes.jpg);
+  width: 26%;
+  height: 30rem;
+  background: linear-gradient(to top, rgba(7, 7, 7, 0.8) 20%, transparent 80%);
   color: white;
   border-radius: 25px;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  z-index: 2;
+}
+/*Tamaño y estilos de las tarjeats*/
+.imgTarjetas{
+  width: 100%;
+  height: 15rem;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+}
+.ir,
+.irRestaurante {
+  background-color: #68A12F;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  margin-top: 10px; 
+  margin-bottom: 13px; 
+
+}
+.cardOne p,
+.cardTwo p,
+.cardThree p{
+  font-size: 1.2rem;
+  margin: 0rem 1.5rem;
+}
+h4{
+  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 2px;
+  margin-top: 19px;
+}
+.lineaVerde{
+  background-color: #68A12F;
+  height: 3px;
+  width: 80%;
+  margin: 0rem auto;
+  margin-bottom: -19px;
+  z-index: 4;
+}
+/*Grid de las imagenes de actividades para hacer*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 90%; 
+  height: 500px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
-.cards img {
-  width: 100%;
-  height:100%;
-  border-radius: 25px;
-  object-fit: cover;
-  z-index: -3;
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+/*Posicion y tamaño de las imagenes*/
+.large-left {
+  grid-row: span 2;
+}
+
+.top-right {
+  grid-column: span 2;
+}
+
+.bottom-left {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.bottom-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.attribution {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7rem;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/*Hospedajes*/
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.card{
+  width: 300px;
+  height: 450px;
+  overflow:hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 25px;
+
+}
+.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.card-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.card-img-glamping {
+  background-image: url('../img-pag-principal/glamping.jpg');
+}
+
+.card-img-hotel {
+  background-image: url('../img-pag-principal/hotel.jpg');
+}
+
+.card-img-cabana {
+  background-image: url(../img-pag-principal/cabañas.jpg);
+}
+
+.tituloCard,
+.lineaBlanca,
+.valoracion,
+.irHospedaje{
+  z-index: 1;
+}
+
+.tituloCard {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+  margin:1rem 1.2rem 0;
+  color: white;
+  position: absolute;
+  bottom: 12rem;
+  font-family: Inter;
+}
+.lineaBlanca{
+  height: 3px;
+  background-color: white;
+  width: 80%;
+  margin: 0.5rem 1.2rem;
+  position: absolute;
+  bottom: 11rem;
+}
+
+.valoracion {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px black;
+  bottom: 5rem;
+  left: 1.rem;
+  color: white;
+}
+
+
+
+.valoracion p {
+  margin: 0.2rem 1.2rem;
+  font-family: Kyiv;
+}
+
+.irHospedaje {
+  background-color: #68A12F;
+  border: none;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: -1.2rem 0.7rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+}
+
+.irHospedaje:hover {
+  background-color: #4f8126;
+}
+
+footer{
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  position:static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  background-image: url(../fondo-de-explora-risaralda.jpg);
+  background-position: bottom center;
+
+}
+footer::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+footer::before{
+  backdrop-filter: blur(30px);
+  z-index: -1;
+}
+#map { 
+  justify-items: center;
+ }
+
