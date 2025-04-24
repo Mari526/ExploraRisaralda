@@ -1,543 +1,419 @@
-body {
+*{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  box-sizing: border-box;
+} 
 
-/* BARRA SUPERIOR */
-.barra-superior {
-  position: fixed;
+/*Agrego la fuente cursiva yesterday*/
+@font-face {
+  font-family: 'Yesterday';
+  src: url('../../../fonts/Yesteryear-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url(../../../fonts/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+ @font-face {
+  font-family: 'Kyiv';
+  src: url('../../../fonts/kyivtype-sans-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+.carouselOne,
+.carouselDos,
+.carouselTres,
+.principal{
+   position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  overflow: hidden;
+  flex-direction: column; 
+  justify-content: flex-start;
+    }
+.carouselOne::before,
+.carouselDos::before,
+.carouselTres::before,
+.principal::before{
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+ url(../../../Img-generales/fondo-de-explora-risaralda.jpg);
+ background-size: cover;
+ background-position: center;
+ z-index: -1;
+    }
+.principal header,
+.principal nav,
+footer{
+  z-index: 1;
+}
+header {
+  width: 100%;
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  right: 0;
   z-index: 1000;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; 
 }
 
-.titulo {
-  font-size: 20px;
+/* Barra superior */
+.barra-superior {
+  backdrop-filter: blur(30px);
+  height: 61px;}
+  
+
+
+.barra-superior .logo h1 {
+  font-size: 3em;
   font-weight: bold;
-}
-
-.iconos {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.iconos i {
-  font-size: 18px;
-  cursor: pointer;
-  color: #333;
-}
-
-.btn {
-  background-color: #2c7a7b;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* BARRA INFERIOR */
-.barra-inferior {
-  position: fixed;
-  top: 60px; /* justo debajo de la barra superior */
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-  padding: 10px 20px;
-  z-index: 999;
-}
-
-.menu-inferior {
-  display: flex;
-  justify-content: flex-start;
-  list-style: none;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-inferior li a {
+  color: #fff;
   text-decoration: none;
+  font-family: yesterday;
+}
+
+.barra-superior .iconos a {
+  margin-left: 15px;
   color: #fff;
-  font-weight: bold;
-  transition: color 0.3s;
+  text-decoration: none;
 }
 
-.menu-inferior li a:hover {
-  color: #2c7a7b;
+.barra-superior .iconos img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 15px;
 }
 
-
-.Informacion1 {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
-  margin: 0;
-  margin-top: 140px;
-  border-radius: 0;
-  overflow: hidden; /* para que la capa no se salga */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),  url(../img/fondo_principal.jpg);
+#buscar-icono img {
+  width: 28px;
+  height: 28px;
+  margin-left: 0;
 }
 
-.Informacion1 h2 {
-  color: white;
-  font-size: 4rem;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 1rem;
-  display: inline-block;
-  margin-left: 16%;
+/* Barra inferior */
+.barra-inferior {
+  background-color:transparent; 
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  width: auto;
+  justify-content: end;
+
 }
+
+.barra-inferior ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+}
+
+.barra-inferior li {
+  margin-right: 20px;
+ 
   
-.contenedor-imagen {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
 }
-    
-.Informacion1 img {
-  width: 100%;
-  height: 550px;
-  max-width: 1200px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: block;
-  gap: 8rem;
+
+.barra-inferior a {
+  color: #fff;
+  text-decoration: none; 
+  transition: text-decoration 0.3s ease-in-out;
 }
-    
-.texto {
+.barra-inferior a:hover{
+  text-decoration: underline solid 2px;
+}
+.principaltitulo{
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  top: 5rem;
+  left: 5rem;
+}
+/*Titulo principal*/
+.tituloPrincipal{
+  font-family: kyiv;
   color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 15px;
-  width: 600px;
-  max-width: 600px;
-  height: 200px;
+  font-size:2.5rem ;
+  z-index: 5;
+  margin-bottom: 0.2rem;
+  }
+.lineaBlanca{
+  height: 3px;
+  background-color: white;
+  width: 10rem;
+  z-index: 4;
 }
-    
-.texto p {
-  margin: 0;
-  font-size: 17px;
-}
-  
-.Informacion2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  background-color: #f3f3f3;
-  height: 300px; 
-}
-    
-.imagen1 img {
+
+/* Estilo para la imagen */
+.lorito {
+  height: 100vh; 
+  display: flex;
   width: 100%;
-  height: 300px;
-  border-radius: 0;
-  object-fit: cover;
+  justify-content: center;
+  margin-top: 9rem;
+  
 }
-    
-.parrafo1 {
+.informacionPrincipal{
+  position: absolute;
+  width: 33%;
+  height: 37%;
+  background-color: rgba(0, 0, 0, 0.8);
+  right: 12.5rem;
+  bottom: 1rem;
+  border-radius: 25px 0 025px 25px;
+}
+.informacionPrincipal p{
+  color: white;
+  margin: 0.7rem 1.3rem;
+  font-size: 1.5 rem;
   text-align: left;
-  padding: 0 1rem;
-  color: black;
+  
 }
-    
-.parrafo1 h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.6rem;
-  color: #68A12F;
+.lorosprincipal {
+  height:75%;
+  max-width: 80%;
+  left: auto;
+  width: 70%;
+  border-radius: 25px ;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+
+  }
+/*Diseños de el espacio de secciones de información*/
+/*Sección blaca */
+.datosRisaralda{
+  background-color: white;
+  width:100%;
+  height:250px;
 }
-    
-.parrafo1 p {
-  font-size: 1.2rem;
-  color: black;
-}
-    
-.parrafo2 {
-  color: black;
-  padding: 0 1rem;
-  font-size: 1.2rem;
-}
-    
-/*carrucel*/
-.Informacion3 {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
-  margin: 0;
-  border-radius: 0;
-  overflow: hidden; /* importante para que la capa no se salga */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../img/fondo_principal.jpg);
+.informacion {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows:auto 1fr 1fr;
+  gap: 10px;
 }
   
-.Informacion3 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: center;
+.imginfo {
+  grid-column: 1 /2;
+  grid-row: 1/ 3;
+
 }
-  
-/* Estilos generales del carrusel */
-#carruselExperiencias {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 15px;
-  overflow: hidden;
-  background: none;
-}
-  
-/* Las imágenes ocupan todo el ancho */
-#carruselExperiencias img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 25px;
-}
-  
-/* Botones de navegación (flechas) */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  padding: 1rem;
-}
-  
-/* Indicadores (los punticos) */
-.carousel-indicators button {
-  background-color: #444;
-}
-  
-.carousel-indicators .active {
-  background-color: #007bff;
-}
-  
-.carousel-item {
-  background: transparent !important; /* ← esto es clave también */
-}
-  
-.card-group {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  justify-content: center;
-}
-  
-.card {
-  flex: 1;
-  background-color: transparent !important;
-  border-radius: 0;
-  overflow: hidden;
-}
-  
-.card img {
-  width: 100%;
+.imgInfoDates{
+  width: 350px;
   height: 250px;
-  object-fit: cover;
-  background: transparent !important;
 }
-    
-.Informacion4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  background-color: #f3f3f3;
-  height: 300px; 
-}
-  
-.imagen2 img {
-  width: 100%;
-  height: 300px;
-  border-radius: 0;
-  object-fit: cover;
-}
-  
-.parrafo3 {
-  text-align: left;
-  padding: 0 1rem;
-  color: black;
-}
-  
-.parrafo3 h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.6rem;
-  color: #68A12F;
-}
-  
-.parrafo3 p {
-  font-size: 1.2rem;
-  color: black;
-}
-  
-.parrafo4 {
-  color: black;
-  padding: 0 1rem;
-  font-size: 1.2rem;
-}
-
-
-/* Sección de fondo para hospedajes */
-.Informacion5 {
-  background-image: url('../img/fondo_principal.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
-  margin: 0;
-  border-radius: 0;
-  overflow: hidden; /* para que la capa no se salga */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../img/fondo_principal.jpg);
-}
-
-/* Título de la sección */
-.Informacion5 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: center;
-}
-
-/* Carrusel de hospedajes */
-#carruselHospedajes {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 15px;
-  overflow: hidden;
-  background: none;
-}
-
-/* Imágenes del carrusel */
-#carruselHospedajes img {
-  width: 100%;
+.titulosInfo {
+  grid-column:  2 / 4;
+  grid-row:1 /2;
+  margin-top: 10px;
   height: auto;
-  object-fit: cover;
-  border-radius: 25px;
+  text-align: left;
+}
+.tituloVerdeInfo{
+font-family: Inter;
+color: #68A12F;
+margin-top: 15px;
+}
+.columnaUno {
+  grid-column: 2 ;
+  grid-row: 2 / 3;
+  margin-left: 8px;
+  
+}
+.columnaUno p{
+ margin-top: -11rem;
+ font-family: Kyiv;
 }
 
-/* Controladores (flechas) */
-#carruselHospedajes .carousel-control-prev-icon,
-#carruselHospedajes .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  padding: 1rem;
+.columnaDos {
+  grid-column: 3;
+  grid-row: 3/4;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.columnaDos p{
+  margin-top: -11.7rem;
+  font-family: Kyiv;
 }
 
-/* Indicadores (puntitos) */
-#carruselHospedajes .carousel-indicators button {
-  background-color: #444;
-}
-
-#carruselHospedajes .carousel-indicators .active {
-  background-color: #007bff;
-}
-
-/* Fondo transparente del item */
-.carousel-item {
-  background: transparent !important;
-}
-
-/* Grupo de tarjetas */
- .card-group {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  justify-content: center;
+/* Contenedor de las tarjetas */
+.cards-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+padding: 0 10%;
 }
 
 /* Tarjetas individuales */
-.card {
-  flex: 1;
-  background-color: transparent !important;
-  border-radius: 0;
-  overflow: hidden;
+.card-item {
+position: relative;
+width: 400px;
+height: 450px;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+transition: transform 0.3s ease;
+margin-top: 1.5rem;
+
 }
 
-/* Imágenes dentro de las tarjetas */
-.card img {
-  width: 100%;
-  height: 250px; /* igual que el carrusel anterior */
-  object-fit: cover;
-  border-radius: 25px;
-  background: transparent !important;
-}
-.Informacion6 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  background-color: #f3f3f3;
-  height: 300px; 
-}
-  
-.imagen3 img {
-  width: 100%;
-  height: 300px;
-  border-radius: 0;
-  object-fit: cover;
-}
-  
-.parrafo5 {
-  text-align: left;
-  padding: 0 1rem;
-  color: black;
-}
-  
-.parrafo5 h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.6rem;
-  color: #68A12F;
-}
-  
-.parrafo5 p {
-  font-size: 1.2rem;
-  color: black;
-}
-  
-.parrafo6 {
-  color: black;
-  padding: 0 1rem;
-  font-size: 1.2rem;
+.card-item:hover {
+transform: translateY(-10px);
 }
 
-.Informacion7 {
-  background-image: url('../img/fondo_principal.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+.card-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Overlay con título y botón */
+.card-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, transparent 80%);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 20px;
+color: white;
+}
+
+.card-overlay h3 {
+font-size: 2rem;
+margin: 15px 0 0 0;
+text-align: center;
+color: white;
+}
+
+.btn-conocer {
+background: transparent;
+border: 2px solid white;
+color: white;
+padding: 8px 25px;
+border-radius: 30px;
+font-size: 1.2rem;
+cursor: pointer;
+transition: all 0.3s ease;
+margin-bottom: 20px;
+align-self: center;
+}
+
+.btn-conocer:hover {
+background: #68A12F;
+color: black;
+}
+.btn-conocer a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev, 
+.carousel-control-next {
+width: 50px;
+height: 50px;
+background: rgba(0,0,0,0.5);
+border-radius: 50%;
+top: 50%;
+transform: translateY(-50%);
+opacity: 0.8;
+}
+
+.carousel-control-prev {
+left: 20px;
+}
+
+.carousel-control-next {
+right: 20px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+bottom: -60px;
+}
+
+.carousel-indicators button {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: white;
+opacity: 0.5;
+margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+opacity: 1;
+}
+h2{
+color: white;
+text-align: center;
+font-weight: bold;
+margin-top: 4rem;
+font-size: 3rem;
+}
+
+.section-titulos{
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  top: 0;
+  margin-top: 1rem;
+  margin-bottom: 30px;
+ 
+}
+footer{
   justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
-  margin: 0;
-  border-radius: 0;
-  overflow: hidden; /* para que la capa no se salga */
-}
+  justify-items: center;
+  align-items: center;
+  position:static;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  display: flex;
+  background-image: url(../../../Img-generales/fondo-de-explora-risaralda.jpg);
+  background-position: bottom center;
 
-.Informacion7::before {
+}
+footer::before{
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* opacidad del fondo */
-  z-index: 0;
-}
-
-.Informacion7 > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Título de la sección */
-.Informacion7 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: center;
-}
-
-/* Carrusel de hospedajes */
-#carruselRESPIRA {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 15px;
-  overflow: hidden;
-  background: none;
-}
-
-/* Imágenes del carrusel */
-#carruselRESPIRA img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 25px;
-}
-
-/* Controladores (flechas) */
-#carruselRESPIRA .carousel-control-prev-icon,
-#carruselRESPIRA .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  padding: 1rem;
+  z-index: 2;
 }
-
-/* Indicadores (puntitos) */
-#carruselRESPIRA .carousel-indicators button {
-  background-color: #444;
-}
-
-#carruselRESPIRA .carousel-indicators .active {
-  background-color: #007bff;
-}
-
-/* Fondo transparente del item */
-.carousel-item {
-  background: transparent !important;
-}
-
-/* Grupo de tarjetas */
- .card-group {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  justify-content: center;
-}
-
-/* Tarjetas individuales */
-.card {
-  flex: 1;
-  background-color: transparent !important;
-  border-radius: 0;
-  overflow: hidden;
-}
-
-/* Imágenes dentro de las tarjetas */
-.card img {
-  width: 100%;
-  height: 250px; /* igual que el carrusel anterior */
-  object-fit: cover;
-  border-radius: 25px;
-  background: transparent !important;
-}
-footer {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;                         /* Texto blanco */
-  text-align: center;                   /* Centrado */
-  padding: 1rem 0;                      /* Espaciado vertical */
-  font-size: 0.9rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  backdrop-filter: blur(5px);          /* Efecto de desenfoque suave */
+footer::before{
+  backdrop-filter: blur(30px);
+  z-index: -1;
 }

@@ -1,329 +1,347 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explora Risaralda - Pereira</title>
-
-    <link rel="stylesheet" href="css/style-pereira.css">
-    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.0/dist/css/coreui.min.css" rel="stylesheet">
-  
-    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.0.0/dist/js/coreui.bundle.min.js"></script>
-    <script src="js/main-pereira.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pereira</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style-pereira.css">
 </head>
 <body>
-    <main>
-    
-    <!-- Sección de información 1 -->
-        <section class="Informacion1">
-          <header>
-            <!-- BARRA SUPERIOR -->
-            <nav class="barra-superior">
-              <div class="titulo">Explora Risaralda</div>
-              <div class="iconos">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-user"></i>
-                <button class="btn">Registrarse</button>
-                <button class="btn">Iniciar sesión</button>
-              </div>
-            </nav>
-          
-            <!-- BARRA INFERIOR -->
-            <nav class="barra-inferior">
-              <ul class="menu-inferior">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Hospedaje</a></li>
-                <li><a href="#">Restaurantes</a></li>
-                <li><a href="#">Cosas para hacer</a></li>
-              </ul>
-            </nav>
-          </header>
-            <h2>PEREIRA</h2>
-          
-            <div class="contenedor-imagen">
-              <img src="img/viaducto_info_Pererira.jpeg" alt="Vista de Pereira" class="imagen2">
+  <section class="principal" id="section-principal">
+    <header>
+      <nav class="barra-superior">
+          <div class="logo">
+              <h1>Explora Risaralda</h1>
+          </div>
+          <div class="iconos">
+              <a href="#" id="buscar-icono"><img src="../../Iconos/icons-búsqueda-header.png" alt="Buscar"></a>
+              <a href="#mapainteractivo"><img src="../../Iconos/icons-mapa-header.png" alt="Mapa"></a>
+              <a href="#"><img src="../../Iconos/icon-campana-header.png" alt="Notificación"></a>
+              <a href="#"><img src="../../Iconos/usuario-header.png" alt="Perfil de usuario"></a>
               
-              <div class="texto">
-                <p>
-                    Pereira, corazón del Eje Cafetero, te espera con paisajes de montañas verdes, 
-                    cafetales infinitos y una biodiversidad única. Vive experiencias ecoturísticas 
-                    inolvidables: desde caminatas por el Parque Nacional Natural Los Nevados hasta 
-                    baños en aguas termales, avistamiento de aves y recorridos por fincas cafeteras 
-                    sostenibles. Descubre una ciudad que combina aventura, cultura cafetera y 
-                    compromiso con el medio ambiente. ¡Tu viaje verde comienza aquí!
-                </p>
-              </div>
-            </div>
-          </section>
-        <section class="Informacion2">
-            <div class="imagen1">
-                <img src="img/pexels-maps-acosta-575577948-16960983.jpg">
-            </div>
-            <div class="parrafo1">
-                <h3>Motor Económico Verde:</h3>
-                <p>
-                    Pereira impulsa una economía sostenible basada en café de especialidad, agroturismo 
-                    regenerativo y manufactura ecológica. Sus fincas cafetaleras con certificación Rainforest 
-                    Alliance y emprendimientos de biocomercio son modelo nacional."
-                </p>
-            </div>
-            <div class="parrafo2">
-                <p>
-                    con mayor presencia del paisaje en los municipios de Apía, Belén de Umbría, Marsella, 
-                    Santuario y Santa Rosa de Cabal. La zona de amortiguamiento incluye dos municipios. 
-                </p>
-            </div>
-        </section>
-              
-        <section class="Informacion3">
-              <h1>Experiencias Únicas en Pereira</h1>
-              
-              <div id="carruselExperiencias" class="carousel slide" data-coreui-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-coreui-target="#carruselExperiencias" data-coreui-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
-                  <button type="button" data-coreui-target="#carruselExperiencias" data-coreui-slide-to="1" aria-label="Imagen 2"></button>
-                  <button type="button" data-coreui-target="#carruselExperiencias" data-coreui-slide-to="2" aria-label="Imagen 3"></button>
-                </div>
-              
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                  <div class="carousel-item active">
-                    <div class="card-group">
-                      <div class="card">
-                          <img src="img/img1_ejemplo.jpg" class="card-img-top" alt="Imagen 1">
-                      </div>
-                      <div class="card">
-                        <img src="img/img2_ejemplo.jpg" class="card-img-top" alt="Imagen 2">
-                      </div>
-                      <div class="card">
-                        <img src="img/img1_ejemplo.jpg" class="card-img-top" alt="Imagen 3">
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Slide 2 -->
-                  <div class="carousel-item">
-                      <div class="card-group">
-                          <div class="card">
-                            <img src="img/img1_ejemplo.jpg" class="card-img-top" alt="Imagen 1">
-                          </div>
-                          <div class="card">
-                            <img src="img/img2_ejemplo.jpg" class="card-img-top" alt="Imagen 2">
-                          </div>
-                          <div class="card">
-                            <img src="img/img1_ejemplo.jpg" class="card-img-top" alt="Imagen 3">
-                          </div>
-                        </div>
-                  </div>
-                  
-                  <!-- Slide 3 -->
-                  <div class="carousel-item">
-                      <div class="card-group">
-                          <div class="card">
-                            <img src="img/img1_ejemplo.jpg" class="card-img-top" alt="Imagen 1">
-                          </div>
-                          <div class="card">
-                            <img src="img/img2_ejemplo.jpg" class="card-img-top" alt="Imagen 2">
-                          </div>
-                          <div class="card">
-                            <img src="img/img1_ejemplo.jpg" class="card-img-top" alt="Imagen 3">
-                          </div>
-                        </div>
-                  </div>
-                </div>
-              
-                <button class="carousel-control-prev" type="button" data-coreui-target="#carruselExperiencias" data-coreui-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-coreui-target="#carruselExperiencias" data-coreui-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
-              </div>
-          </section>
+          </div>
+      </nav>
+  
+      <nav class="barra-inferior">
+          <ul class="menu-inferior">
+              <li><a href="#section-principal">Inicio</a></li>
+              <li><a href="#">Hospedaje</a></li>
+              <li><a href="#">Restaurantes</a></li>
+              <li><a href="#">Cosas para Hacer</a></li>
+          </ul>
+      </nav>
+  </header>
+  <div class="principaltitulo">
+    <h3 class="tituloPrincipal" >Pereira</h3>
+    <div class="lineaBlanca"></div></div>
+  <div class="lorito">
+    <img src="../../Img-generales/Pereira_img_municipios.jpeg" alt="" class="lorosprincipal">
+    <div class="informacionPrincipal">
+      <p>Pereira, corazón del Eje Cafetero, te espera con paisajes de montañas verdes, cafetales infinitos y una biodiversidad única. Vive experiencias ecoturísticas inolvidables: desde caminatas por el Parque Nacional Natural Los Nevados hasta baños en aguas termales, avistamiento de aves y recorridos por fincas cafeteras sostenibles. Descubre una ciudad que combina aventura, cultura cafetera y compromiso con el medio ambiente. ¡Tu viaje verde comienza aquí!</p>
+    </div>
+  </div>   
+  </section>
 
-      <section class="Informacion4">
-          <div class="imagen2">
-              <img src="img/colibri.jpg">
-          </div>
-          <div class="parrafo3">
-              <h3>Paraíso Biodiverso</h3>
-              <p>
-                  Pereira alberga el 7% de las aves de Colombia, con 600 especies registradas en corredores 
-                  como la Reserva Río Blanco. Sus termales naturales (como Santa Rosa de Cabal) combinan aguas 
-                  volcánicas con bosques de niebla, ideales para turismo de bienestar.
-              </p>
-          </div>
-          <div class="parrafo4">
-              <p>
-                  Pereira despliega su riqueza natural en ecosistemas únicos: bosques de niebla que abrazan termales 
-                  milenarios y páramos llenos de vida. La Reserva Río Blanco, santuario de aves, y Ukumarí, con sus 
-                  historias de rescate animal, ofrecen una conexión profunda con la naturaleza. Aquí no solo contemplas 
-                  el paisaje, sino que te conviertes en parte activa de su conservación.
-              </p>
-          </div>
-      </section>
-      <section class="Informacion5">
-        <h1>Hospedajes con Alma en Pereira</h1>
-      
-        <div id="carruselHospedajes" class="carousel slide" data-coreui-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-coreui-target="#carruselHospedajes" data-coreui-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-coreui-target="#carruselHospedajes" data-coreui-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-coreui-target="#carruselHospedajes" data-coreui-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-      
-          <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/img4_ejemplo.jpg" class="card-img-top" alt="Hotel 1">
-                </div>
-                <div class="card">
-                  <img src="img/img5_ejemplo.jpg" class="card-img-top" alt="Hotel 2">
-                </div>
-                <div class="card">
-                  <img src="img/img6_ejemplo.jpg" class="card-img-top" alt="Hotel 3">
-                </div>
+  <!--Section de información los recuadros blancos para el cambio de imagen -->      
+  <section class="datosRisaralda" >
+    <div class="informacion"> 
+      <div class="img-info"><img src="../../Img-generales/img-info-mirador.jpg" alt="" class="imgInfoDates">
+      </div> 
+      <div class="titulosInfo"><h3 class="tituloVerdeInfo">Motor Económico Verde:</h3>
+      </div> 
+      <div class="columnaUno">
+        <p>Pereira impulsa una economía sostenible basada en café de especialidad, agroturismo regenerativo y manufactura ecológica. Sus fincas cafetaleras con certificación Rainforest Alliance y emprendimientos de biocomercio son modelo nacional."
+        </p>
+      </div> 
+      <div class="columnaDos">
+        <p>con mayor presencia del paisaje en los municipios de Apía, Belén de Umbría, Marsella, Santuario y Santa Rosa de Cabal. La zona de amortiguamiento incluye dos municipios</p>
+      </div> 
+    </div>
+  </section>
+
+<!--Section Cosas para hacer-->
+  <section class="carouselOne">
+    <div id="carouselCosasParaHacer" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <h2 class="section-titulos">Experiencias Únicas en Pereira</h2>
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card-item">
+              <img src="../../Img-generales/senderismo.jpg" alt="Pereira">
+              <div class="card-overlay">
+                <h3>Actividad</h3>
+                <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
               </div>
             </div>
-      
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/img4_ejemplo.jpg" class="card-img-top" alt="Hotel 4">
-                </div>
-                <div class="card">
-                  <img src="img/img5_ejemplo.jpg" class="card-img-top" alt="Hotel 5">
-                </div>
-                <div class="card">
-                  <img src="img/img6_ejemplo.jpg" class="card-img-top" alt="Hotel 6">
-                </div>
+            <div class="card-item">
+              <img src="../../Img-generales/rios.jpg" alt="Santuario">
+              <div class="card-overlay">
+                <h3>Actividad</h3>
+                <button class="btn-conocer">Conocer</button>
               </div>
             </div>
-      
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/img4_ejemplo.jpg" class="card-img-top" alt="Hotel 7">
-                </div>
-                <div class="card">
-                  <img src="img/img5_ejemplo.jpg" class="card-img-top" alt="Hotel 8">
-                </div>
-                <div class="card">
-                  <img src="img/img6_ejemplo.jpg" class="card-img-top" alt="Hotel 9">
-                </div>
+            <div class="card-item">
+              <img src="../../Img-generales/reservas.jpg" alt="Santa Rosa">
+              <div class="card-overlay">
+                <h3>Actividad</h3>
+                <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
               </div>
             </div>
           </div>
-      
-          <button class="carousel-control-prev" type="button" data-coreui-target="#carruselHospedajes" data-coreui-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-coreui-target="#carruselHospedajes" data-coreui-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
         </div>
-      </section>
-      <section class="Informacion6">
-          <div class="imagen3">
-              <img src="img/frijoles.jpg">
-          </div>
-          <div class="parrafo5">
-              <h3>Sabores con Raíces:</h3>
-              <p>
-                  Pereira sorprende con una gastronomía que honra su herencia cafetera: desde la bandeja montañera —cargada 
-                  de fríjoles aromáticos y chicharrón crujiente—
-              </p>
-          </div>
-          <div class="parrafo6">
-              <p>
-                  hasta arepas de maíz amarillo molido en piedra. Cada plato cuenta la historia de campesinos e indígenas 
-                  que cultivan ingredientes con técnicas ancestrales.
-              </p>
-          </div>
-      </section>
 
-      <section class="Informacion7">
-        <h1>Respira, Explora, Conecta: Hospédate en la Pereira más Natural</h1>
-      
-        <div id="carruselRESPIRA" class="carousel slide" data-coreui-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-coreui-target="#carruselRESPIRA" data-coreui-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-coreui-target="#carruselRESPIRA" data-coreui-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-coreui-target="#carruselRESPIRA" data-coreui-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-      
-          <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/img7_ejemplo.jpg" class="card-img-top" alt="Hotel 1" <a href="../gastronomia/restaurantes/pereira.html">pareira</a>>
-                </div>
-                <div class="card">
-                  <img src="img/img8_ejemplo.jpg" class="card-img-top" alt="Hotel 2">
-                </div>
-                <div class="card">
-                  <img src="img/img7_ejemplo.jpg" class="card-img-top" alt="Hotel 3">
-                </div>
+        <!--slider 2-->
+        <div class="carousel-item">
+          <div class="cards-wrapper">
+
+            <div class="card-item">
+              <img src="../../Img-generales/senderismo.jpg" alt="Actividad">
+              <div class="card-overlay">
+                <h3>Senderismo</h3>
+                <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
               </div>
             </div>
-      
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/img7_ejemplo.jpg" class="card-img-top" alt="Hotel 4">
-                </div>
-                <div class="card">
-                  <img src="img/img8_ejemplo.jpg" class="card-img-top" alt="Hotel 5">
-                </div>
-                <div class="card">
-                  <img src="img/img7_ejemplo.jpg" class="card-img-top" alt="Hotel 6">
-                </div>
+
+            <div class="card-item">
+              <img src="../../Img-generales/rios.jpg" alt="Santuario">
+              <div class="card-overlay">
+                <h3>Actividad</h3>
+                <button class="btn-conocer">Conocer</button>
               </div>
             </div>
-      
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/img7_ejemplo.jpg" class="card-img-top" alt="Hotel 7">
-                </div>
-                <div class="card">
-                  <img src="img/img8_ejemplo.jpg" class="card-img-top" alt="Hotel 8">
-                </div>
-                <div class="card">
-                  <img src="img/img7_ejemplo.jpg" class="card-img-top" alt="Hotel 9">
-                </div>
+
+            <div class="card-item">
+              <img src="../../Img-generales/reservas.jpg" alt="Santa Rosa">
+              <div class="card-overlay">
+                <h3>Actividad</h3>
+                <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
               </div>
             </div>
           </div>
-      
-          <button class="carousel-control-prev" type="button" data-coreui-target="#carruselRESPIRA" data-coreui-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-coreui-target="#carruselRESPIRA" data-coreui-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
         </div>
-      </section>
+      </div>
+      
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselCosasParaHacer" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselCosasParaHacer" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselCosasParaHacer" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselCosasParaHacer" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselCosasParaHacer" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <p>© 2026 Explora Risaralda | Todos los derechos reservados.</p>
-    </footer>
+  <!--Section de información los recuadros blancos para el cambio de imagen -->      
+  <section class="datosRisaralda" >
+    <div class="informacion"> 
+      <div class="img-info"><img src="../../Img-generales/img-loros.jpg" alt="" class="imgInfoDates">
+      </div> 
+      <div class="titulosInfo"><h3 class="tituloVerdeInfo">Paraíso Biodiverso</h3>
+      </div> 
+      <div class="columnaUno">
+        <p>Pereira alberga el 7% de las aves de Colombia, con 600 especies registradas en corredores como la Reserva Río Blanco. Sus termales naturales (como Santa Rosa de Cabal) combinan aguas volcánicas con bosques de niebla, ideales para turismo de bienestar. 
+        </p>
+      </div> 
+      <div class="columnaDos">
+        <p>Ecosistemas únicos bosques de niebla que abrazan termales milenarios y páramos llenos de vida. La Reserva Río Blanco, santuario de aves, y Ukumarí, con sus historias de rescate animal, ofrecen una conexión profunda con la naturaleza.</p>
+      </div> 
+    </div>
+  </section>
 
-</main>
+  <!--Section Hospedajes pereira-->
+  <section class="carouselDos">
+    <div id="carouselHospedajes" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <h2 class="section-titulos">Hospedajes con Alma en Pereira</h2>
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card-item">
+              <img src="../../Img-generales/cabañas.jpg" alt="Pereira">
+              <div class="card-overlay">
+                <h3>Hospedaje</h3>
+                <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <img src="../../Img-generales/glamping.jpg" alt="Santuario">
+              <div class="card-overlay">
+                <h3>Hospedaje</h3>
+                <button class="btn-conocer">Conocer</button>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <img src="../../Img-generales/hotel.jpg" alt="Santa Rosa">
+              <div class="card-overlay">
+                <h3>Hospedaje</h3>
+                <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Slide2--> 
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card-item">
+              <img src="../../Img-generales/cabañas.jpg" alt="Pereira">
+              <div class="card-overlay">
+                <h3>Hospedaje</h3>
+                <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <img src="../../Img-generales/glamping.jpg" alt="Glamping">
+              <div class="card-overlay">
+                <h3>Hospedaje</h3>
+                <button class="btn-conocer">Conocer</button>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <img src="../../Img-generales/hotel.jpg" alt="Santa Rosa">
+              <div class="card-overlay">
+                <h3>Hospedaje</h3>
+                <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselHospedajes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselHospedajes" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselHospedajes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselHospedajes" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselHospedajes" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+  <!--Section de información los recuadros blancos para el cambio de imagen -->      
+  <section class="datosRisaralda" >
+    <div class="informacion"> 
+      <div class="img-info"><img src="../../Img-generales/img-info-cafe.jpg" alt="" class="imgInfoDates">
+      </div> 
+      <div class="titulosInfo"><h3 class="tituloVerdeInfo">Sabores con Raíces:</h3>
+      </div> 
+      <div class="columnaUno">
+        <p>Pereira sorprende con una gastronomía que honra su herencia cafetera: desde la bandeja montañera —cargada de fríjoles aromáticos y chicharrón crujiente—
+        </p>
+      </div> 
+      <div class="columnaDos">
+        <p> hasta arepas de maíz amarillo molido en piedra. Cada plato cuenta la historia de campesinos e indígenas que cultivan ingredientes con técnicas ancestrales.</p>
+      </div> 
+    </div>
+  </section>
+
+  <!--Section Restaurantes-->
+  <section class="carouselTres">
+    <div id="carouselRestaurantes" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <h2 class="section-titulos">Sabores únicos</h2>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item active">
+          <div class="cards-wrapper">
+            <div class="card-item">
+              <img src="../../Img-generales/restaurantes.jpg" alt="Pereira">
+              <div class="card-overlay">
+                <h3>Restaurantes</h3>
+                <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
+              </div>
+            </div>
+            <div class="card-item">
+              <img src="../../Img-generales/barOficial.jpg" alt="Santuario">
+              <div class="card-overlay">
+                <h3>Restaurantes</h3>
+                <button class="btn-conocer">Conocer</button>
+              </div>
+            </div>
+            <div class="card-item">
+              <img src="../../Img-generales/cafeterias.jpg" alt="Santa Rosa">
+              <div class="card-overlay">
+                <h3>Restaurantes</h3>
+                <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Slide 1 -->
+         <div class="carousel-item">
+          <div class="cards-wrapper">
+            <div class="card-item">
+              <img src="../../Img-generales/barOficial.jpg" alt="Pereira">
+              <div class="card-overlay">
+                <h3>Restaurantes</h3>
+                <button class="btn-conocer"><a href="../municipios/pereira/index-pereira.html">Conocer</a></button>
+              </div>
+            </div>
+            <div class="card-item">
+              <img src="../../Img-generales/cafeterias.jpg" alt="Santuario">
+              <div class="card-overlay">
+                <h3>Restaurantes</h3>
+                <button class="btn-conocer">Conocer</button>
+              </div>
+            </div>
+            <div class="card-item">
+              <img src="../../Img-generales/restaurantes.jpg" alt="Santa Rosa">
+              <div class="card-overlay">
+                <h3>Restaurantes</h3>
+                <button class="btn-conocer"><a href="../municipios/Santa-rosa/inde-santarosa.html">Conocer</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestaurantes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselRestaurantes" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselRestaurantes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselRestaurantes" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselRestaurantes" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+  <footer>&copy;2026 Explora Risaralda | Todos los derechos reservados</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
 </body>
 </html>
