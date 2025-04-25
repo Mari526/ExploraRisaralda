@@ -1,0 +1,119 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/fondo_principal.jpg);
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Impide el scroll horizontal en toda la página */
+}
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+
+/* Barra superior */
+.barra-superior {
+    backdrop-filter: blur(30px);
+    height: 61px;
+}
+
+.barra-superior .logo h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.barra-superior .iconos a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.barra-superior .iconos img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+#buscar-icono img{
+    width: 28px;
+    height: 28px;
+    margin-left: 0;
+}
+
+/* Barra inferior */
+.barra-inferior {
+    justify-content: flex-end; /* Alinea el menú a la derecha */
+}
+
+.barra-inferior ul.menu-inferior {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra-inferior ul.menu-inferior li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+.barra-inferior ul.menu-inferior li a:hover {
+    text-decoration: underline solid 2px;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+    
+}
+
+.container {
+    background-color: rgba(72, 69, 69, 0.5);
+    box-shadow: 8px 8px 8px rgba(255, 254, 254, 0.5);
+    border-radius: 15px;
+    width: 35%;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 400px;
+    margin-top: 20px;
+    
+}
+
+.title {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(30px);
+    position: relative;
+    bottom: 0;
+}
