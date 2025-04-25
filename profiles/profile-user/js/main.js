@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         subNotificacionesSwitches.forEach((subSwitch, index) => {
             subSwitch.disabled = !generalActivado;
-            const notificacionItem = notificacionItems[index + 1]; // +1 porque el primero es el general
+            const notificacionItem = notificacionItems[index + 1]; 
             if (!generalActivado) {
                 notificacionItem.classList.add('desactivado');
                 subSwitch.checked = false; // Desmarca los interruptores secundarios
@@ -26,50 +26,67 @@ document.addEventListener('DOMContentLoaded', function() {
             const tipo = this.dataset.tipo;
             const estado = this.checked ? 'activadas' : 'desactivadas';
             console.log(`Notificaciones para ${tipo} ${estado}.`);
-            // Aquí puedes agregar la lógica específica para cada tipo de notificación
         });
     });
 });
 
-//slider
 
+//cerrar sesion
 document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('.slider-miniaturas-container');
-
-    sliders.forEach(sliderContainer => {
-        const slider = sliderContainer.querySelector('.slider-miniaturas');
-        let scrollAmount = 0;
-        const scrollStep = 100; // Cantidad de píxeles a desplazar por clic
-
-        sliderContainer.addEventListener('wheel', (event) => {
-            event.preventDefault();
-            sliderContainer.scrollLeft += event.deltaY;
+    const cerrarSesionBtn = document.querySelector('.logout');
+    
+    if (cerrarSesionBtn) {
+      cerrarSesionBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Crear la ventana modal
+        const modalOverlay = document.createElement('div');
+        modalOverlay.className = 'modal-overlay';
+        
+        const modalContainer = document.createElement('div');
+        modalContainer.className = 'modal-container';
+        
+        const modalTitle = document.createElement('div');
+        modalTitle.className = 'modal-title';
+        modalTitle.textContent = '¿Cerrar sección?';
+        
+        const modalMessage = document.createElement('div');
+        modalMessage.className = 'modal-message';
+        modalMessage.textContent = '¿Estas seguro de cerrar sección?';
+        
+        const modalButtons = document.createElement('div');
+        modalButtons.className = 'modal-buttons';
+        
+        const noButton = document.createElement('button');
+        noButton.className = 'modal-button button-no';
+        noButton.textContent = 'No';
+        
+        const siButton = document.createElement('button');
+        siButton.className = 'modal-button button-si';
+        siButton.textContent = 'Si';
+        
+        //evento al botón No
+        noButton.addEventListener('click', function() {
+          document.body.removeChild(modalOverlay);
         });
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const favoritosSecciones = document.querySelectorAll('.favoritos-seccion');
-
-    favoritosSecciones.forEach(seccion => {
-        const sliderContainer = seccion.querySelector('.slider-miniaturas-container');
-        const slider = sliderContainer.querySelector('.slider-miniaturas');
-        const prevButton = seccion.querySelector('.prev');
-        const nextButton = seccion.querySelector('.next');
-
-        if (prevButton && nextButton) {
-            prevButton.addEventListener('click', () => {
-                sliderContainer.scrollLeft -= 150; // Ancho de la miniatura + espacio
-            });
-
-            nextButton.addEventListener('click', () => {
-                sliderContainer.scrollLeft += 150; // Ancho de la miniatura + espacio
-            });
-        }
-
-        sliderContainer.addEventListener('wheel', (event) => {
-            event.preventDefault();
-            sliderContainer.scrollLeft += event.deltaY;
+        
+        //evento al botón Si
+        siButton.addEventListener('click', function() {
+          // Redirigir a la página principal
+          window.location.href = '#'; 
         });
-    });
-});
+        
+        //estructura modal
+        modalButtons.appendChild(noButton);
+        modalButtons.appendChild(siButton);
+        
+        modalContainer.appendChild(modalTitle);
+        modalContainer.appendChild(modalMessage);
+        modalContainer.appendChild(modalButtons);
+        
+        modalOverlay.appendChild(modalContainer);
+        
+        document.body.appendChild(modalOverlay);
+      });
+    }
+  });

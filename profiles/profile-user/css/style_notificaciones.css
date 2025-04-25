@@ -43,20 +43,6 @@ nav {
     margin-right: 15px;
 }
 
-#buscar-input-container {
-    display: none; /* Inicialmente oculto */
-    margin-left: 5px;
-   
-}
-
-#buscar-input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    height: 20px;
-    border: none;
-    outline: none;
-}
 
 
 /* Barra inferior */
@@ -138,6 +124,7 @@ p{
     color: #fff;
     margin-bottom: 20px;
     align-items: center;
+    display: flex;
     
 }
 
@@ -149,7 +136,8 @@ p{
 
 .logout{
     border-radius: 25px;
-    padding: 2px;
+    padding: 5px;
+    margin-top: 25px;
 }
 
 .perfil-options a.logout {
@@ -169,9 +157,8 @@ p{
 
 /*notificaciones-container*/
 .notificaciones-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
     padding: 6px;
     width: 90%;
     justify-items: left;
@@ -180,13 +167,14 @@ p{
 
 .title-notificacion{
     display: block;
-    border-bottom: 2px solid #fff;
-    height: 53px;
+    height: 49px;
+    width: 170px;
     margin-left: 10px;
 }
 
 .title-notificacion h2{
     font-size: 28px;
+    border-bottom: 2px solid #fff;
 }
 
 .notificacion-item {
@@ -200,7 +188,8 @@ p{
     height: 28px;
     box-shadow: 7px 7px 7px rgba(255, 254, 254, 0.5);
     margin-left: 10px;
-    margin-bottom: 7px;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 
@@ -252,7 +241,7 @@ input:checked + .slider:before {
     transform: translateX(20px);
 }
 
-/* Estilo redondeado del interruptor */
+
 .slider.round {
     border-radius: 34px;
 }
@@ -261,11 +250,16 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* Estilo para los elementos desactivados */
+/*elementos desactivados */
 .notificacion-item.desactivado {
     color: #888;
 }
-
+.notificacion-item {
+    margin-bottom: 0px !important;
+}
+.notificaciones-container {
+    padding: 0px 6px;
+}
 .notificacion-item.desactivado .switch {
     opacity: 0.6;
     pointer-events: none; /* Evita la interacción con el interruptor desactivado */
@@ -278,6 +272,69 @@ input:checked + .slider:before {
 .notificacion-item.desactivado .switch input:checked + .slider {
     background-color: #aaa;
 }
+
+
+/*cerar-sesion */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background-color: rgba(50, 50, 50, 0.85);
+    border-radius: 8px;
+    padding: 25px;
+    width: 350px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .modal-message {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-button {
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .button-no {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .button-si {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+
 
 .footer{
     position: fixed;

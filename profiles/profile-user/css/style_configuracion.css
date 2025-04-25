@@ -43,21 +43,6 @@ nav {
     margin-right: 15px;
 }
 
-#buscar-input-container {
-    display: none; /* Inicialmente oculto */
-    margin-left: 5px;
-   
-}
-
-#buscar-input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    height: 20px;
-    border: none;
-    outline: none;
-}
-
 
 /* Barra inferior */
 .barra-inferior {
@@ -138,6 +123,7 @@ p{
     color: #fff;
     margin-bottom: 20px;
     align-items: center;
+    display: flex;
     
 }
 
@@ -149,7 +135,8 @@ p{
 
 .logout{
     border-radius: 25px;
-    padding: 2px;
+    padding: 5px;
+    margin-top: 25px;
 }
 
 .perfil-options a.logout {
@@ -166,14 +153,14 @@ p{
     height: 20px;
 }
 
+/*configuracion*/
 .configuracion-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
     padding: 10px;
-    width: 90%;
-    justify-items: left;
     color: white;
+    width: 90%;
 }
 
 .titulo{
@@ -181,6 +168,7 @@ p{
     border-bottom: 2px solid #fff;
     height: 54px;
     margin-left: 25px;
+    width: 180px;
 }
 
 .titulo h2{
@@ -190,6 +178,7 @@ p{
 .configuracion-container a{
     text-decoration: none;
     color: #fff;
+    margin-top: 20px;
 }
 
 .configuracion-container img{
@@ -198,6 +187,68 @@ p{
     margin-right: 10px;
     margin-left: 25px;
 }
+
+
+/*cerar-sesion */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background-color: rgba(50, 50, 50, 0.85);
+    border-radius: 8px;
+    padding: 25px;
+    width: 350px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .modal-message {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .modal-button {
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .button-no {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .button-si {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
 
 .footer{
     position: fixed;
