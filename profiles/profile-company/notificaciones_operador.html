@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de operador turistico</title>
+    <link rel="stylesheet" href="css/style_notificaciones_operador.css">
+</head>
+<body>
+
+    <header>
+        <nav class="barra-superior">
+            <div class="logo">
+            <h1>Explora Risaralda</h1>
+            </div>
+            <div class="iconos">
+                <a href="#"><img src="../profile-user/img/busqueda.png" alt="Buscar"></a>
+                <a href="#"><img src="../profile-user/img/ubicación.png" alt="Mapa"></a>
+                <a href="#"><img src="../profile-user/img/notificación.png" alt="Notificación"></a>
+                <a href="#"><img src="../profile-user/img/usuario.png" alt="Perfil de usuario"></a>
+                
+            </div>
+        </nav>
+    
+        <nav class="barra-inferior">
+            <ul class="menu-inferior">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Hospedaje</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Cosas para Hacer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="perfil-menu">
+                <div class="perfil-image">
+                    <span></span>
+                </div>
+                <p>Hola!</p>
+                <div class="perfil-options">
+                    <a href="./perfil_operador.html"><img src="../profile-user/img/usuario.png">Publicaciones</a>
+                    <a href="./notificaciones_operador.html"><img src="../profile-user/img/notificación.png">Notificaciones</a>
+                    <a href="./reseñas_operador.html"><img src="../profile-user/img/reseñas.png">Reseñas</a>
+                    <a href="./personalizar.html"><img src="../profile-user/img/personalizacion.png">Personalización</a>
+                    <a href="./configuracion_operador.html"><img src="../profile-user/img/ajustes.png">configuración</a>
+                    <a href="#" class="logout">Cerrar sesión<img src="../profile-user/img/cerrar_sesión.png"></a>
+                </div>
+            </div>
+
+            <div class="notificaciones-container">
+                <div class="title-notificacion">
+                    <h2>Notificaciones</h2>
+                </div>
+                <div class="notificacion-item">
+                    <span>Notificaciones</span>
+                    <label class="switch">
+                        <input type="checkbox" id="notificaciones-generales">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="notificacion-item">
+                    <span>Comentarios</span>
+                    <label class="switch">
+                        <input type="checkbox" data-tipo="comentarios" class="sub-notificacion">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="notificacion-item">
+                    <span>Calificaciones</span>
+                    <label class="switch">
+                        <input type="checkbox" data-tipo="calificaciones" class="sub-notificacion">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">&copy; 2026 Explora Risaralda | Todo los derechos reservados.</footer>
+    
+    <script type="text/javascript" src="js/main_perfil_operador.js"></script>
+</body>
+</html>
+
