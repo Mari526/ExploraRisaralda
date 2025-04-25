@@ -27,7 +27,7 @@
 .carouselDos,
 .carouselTres,
 .principal{
-   position: relative;
+  position: relative;
   width: 100%;
   height: 100vh;
   background-size: cover;

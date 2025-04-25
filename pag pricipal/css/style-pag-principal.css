@@ -171,9 +171,14 @@ nav {
   justify-content: center;
   margin-top: 20px;
 }
-
+.lorito img{
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+  width: 70%;
+  height: 80%;
+}
 .lorosprincipal {
-  height:64%;
+  height:100%;
   max-width: 80%;
   left: auto;
   }
