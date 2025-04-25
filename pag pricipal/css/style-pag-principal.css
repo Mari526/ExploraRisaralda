@@ -430,7 +430,11 @@ font-size: 3rem;
   color: white;
   margin-top: 10px; 
   margin-bottom: 13px; 
-
+}
+.ir,
+.irRestaurante a{
+  text-decoration: none;
+  color: white;
 }
 .cardOne p,
 .cardTwo p,
@@ -679,4 +683,8 @@ footer::before{
 #map { 
   justify-items: center;
  }
+ .icono-abrir-modal {
+  width: 48px; 
+  height: 48px; 
+}
 
